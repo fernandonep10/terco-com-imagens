@@ -24,6 +24,11 @@ const styles = StyleSheet.create({
     backgroundColor: "blue",
   },
 
+  contencao: {
+    flex: 1,
+    backgroundColor: "blue",
+  },
+
   horizontalContainer: {
     flexDirection: "row", // Define layout horizontal
     justifyContent: "space-between", // Espaçamento entre os itens

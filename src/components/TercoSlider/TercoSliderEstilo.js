@@ -1,24 +1,18 @@
 import { StyleSheet } from "react-native";
+import { FlatList } from "react-native-gesture-handler";
 
 const styles = StyleSheet.create({
-  sliderContainer: {
-    flex: 1,
-    backgroundColor: "#ADD8E6", // Fundo azul claro
+  container: {
+    alignSelf: "center",
     alignItems: "center",
-    justifyContent: "center",
+    width: "100%",
   },
-  carrosel: {
+  flatList: {
     backgroundColor: "#000",
-    flex: 1,
   },
   carouselItem: {
-    width: 60, // Largura do item
-    height: 60, // Altura do item
-    marginBottom: 150, // Espaçamento entre os itens
-    borderRadius: 30, // Bordas arredondadas
-    justifyContent: "center",
-    alignItems: "center",
-    overflow: "hidden", // Garante que a imagem não ultrapasse os limites
+    backgroundColor: "#000",
+    marginBottom: "30%",
   },
   carouselImage: {
     width: "100%",
