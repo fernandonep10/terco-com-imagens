@@ -9,16 +9,17 @@ import {
   Text,
   ActivityIndicator,
   StyleSheet,
+  SafeAreaView,
 } from "react-native";
 import { DatabaseProvider } from "./src/context/DatabaseContext"; // Importe o Provider
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import SafeAreaViewManual from "./src/components/SafeAreaViewManual/SafeAreaViewManual";
+//import SafeAreaViewManual from "./src/components/SafeAreaViewManual/SafeAreaViewManual";
 
 const Stack = createStackNavigator(); // Adicione esta linha
 
 export default function App() {
   return (
-    <SafeAreaViewManual>
+    <SafeAreaView style={{ flex: 1 }}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
 
@@ -39,6 +40,6 @@ export default function App() {
           </NavigationContainer>
         </DatabaseProvider>
       </GestureHandlerRootView>
-    </SafeAreaViewManual>
+    </SafeAreaView>
   );
 }

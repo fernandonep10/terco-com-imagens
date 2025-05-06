@@ -27,11 +27,14 @@ export default function TercoSlider({ misterioAtual, onItemChange }) {
   const ITEM_FULL_HEIGHT = ITEM_BASE_HEIGHT + ITEM_SPACING;
   const CONTAINER_HEIGHT = ITEM_FULL_HEIGHT * VISIBLE_ITEMS;
 
+  console.log(misterioAtual.oracoes);
+
   const DATA = misterioAtual.oracoes.map((item, index) => {
     const nomeImagem = item.icone.split("/").pop(); // exemplo: "anunciacao.jpg"
     return {
       key: String(index),
       imagem: imagens[nomeImagem], // busca em imagemMapeamento.js
+      oracao: item.oracao,
     };
   });
 
@@ -61,7 +64,7 @@ export default function TercoSlider({ misterioAtual, onItemChange }) {
     });
 
     if (onItemChange) {
-      onItemChange(currentIndex.current);
+      onItemChange(DATA[currentIndex.current].oracao);
     }
   };
 

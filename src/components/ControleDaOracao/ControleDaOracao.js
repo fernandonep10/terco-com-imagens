@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, Button } from "react-native";
 import OracaoAtual from "../../components/OracaoAtual/OracaoAtual";
 import PlayerDaOracao from "../../components/PlayerDaOracao/PlayerDaOracao";
@@ -10,10 +10,19 @@ export default function ControlesDeOracao({
   misterioAtual,
   tercoAtual,
 }) {
+  const [oracaoAtual, setOracaoAtual] = useState(
+    misterioAtual.oracoes[0]?.texto || ""
+  );
+
+  const handleItemChange = (index) => {
+    const novaOracao = misterioAtual.oracoes[index]?.texto || "";
+    setOracaoAtual(novaOracao);
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.oracaoAtual}>
-        <OracaoAtual />
+        <OracaoAtual texto={oracaoAtual} />
       </View>
 
       <View style={styles.horizontalContainer}>
@@ -26,6 +35,7 @@ export default function ControlesDeOracao({
             proximoMisterioOuTerco={proximoMisterioOuTerco}
             misterioAtual={misterioAtual}
             tercoAtual={tercoAtual}
+            onItemChange={(texto) => setOracaoAtual(texto)}
           />
         </View>
       </View>
