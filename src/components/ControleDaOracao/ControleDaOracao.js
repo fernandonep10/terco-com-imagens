@@ -11,13 +11,8 @@ export default function ControlesDeOracao({
   tercoAtual,
 }) {
   const [oracaoAtual, setOracaoAtual] = useState(
-    misterioAtual.oracoes[0]?.texto || ""
+    misterioAtual.oracoes[0].oracao
   );
-
-  const handleItemChange = (index) => {
-    const novaOracao = misterioAtual.oracoes[index]?.texto || "";
-    setOracaoAtual(novaOracao);
-  };
 
   return (
     <View style={styles.container}>

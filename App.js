@@ -22,7 +22,6 @@ export default function App() {
     <SafeAreaView style={{ flex: 1 }}>
       <GestureHandlerRootView style={{ flex: 1 }}>
         <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
-
         <DatabaseProvider style={{ flex: 1 }}>
           <NavigationContainer style={{ flex: 1 }}>
             <Stack.Navigator initialRouteName="PaginaInicial">

@@ -27,8 +27,6 @@ export default function TercoSlider({ misterioAtual, onItemChange }) {
   const ITEM_FULL_HEIGHT = ITEM_BASE_HEIGHT + ITEM_SPACING;
   const CONTAINER_HEIGHT = ITEM_FULL_HEIGHT * VISIBLE_ITEMS;
 
-  console.log(misterioAtual.oracoes);
-
   const DATA = misterioAtual.oracoes.map((item, index) => {
     const nomeImagem = item.icone.split("/").pop(); // exemplo: "anunciacao.jpg"
     return {
