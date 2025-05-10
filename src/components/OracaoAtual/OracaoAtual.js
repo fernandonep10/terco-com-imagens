@@ -12,8 +12,6 @@ export default function OracaoAtual({ texto }) {
   useEffect(() => {
     //Só executa a animação se o a janela por onde o texto é visto for menor que o texto
     if (containerHeight > 0 && textHeight > containerHeight) {
-      //console.log("animação iniciada");
-
       // para qualquer animação em curso e reseta
       scrollAnim.stopAnimation();
       scrollAnim.setValue(0);
@@ -34,8 +32,6 @@ export default function OracaoAtual({ texto }) {
       onLayout={(e) => {
         // mede a altura real do container (janela de visualização do texto)
         setContainerHeight(e.nativeEvent.layout.height);
-
-        console.log("Altura do container -- :", e.nativeEvent.layout.height);
       }}
     >
       <Animated.View
@@ -49,7 +45,6 @@ export default function OracaoAtual({ texto }) {
           onLayout={(e) => {
             // mede a altura real do bloco de texto
             setTextHeight(e.nativeEvent.layout.height);
-            console.log("Altura do texto branco:", e.nativeEvent.layout.height);
           }}
         >
           {texto}
