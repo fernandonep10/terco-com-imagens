@@ -81,8 +81,8 @@ export default function TercoSlider({ misterioAtual, onItemChange }) {
         decelerationRate="fast"
         onScrollEndDrag={handleEndDrag}
         contentContainerStyle={{
-          paddingTop: "35%",
-          paddingBottom: "35%",
+          paddingTop: "50%",
+          paddingBottom: "50%",
         }}
         onScroll={Animated.event(
           [{ nativeEvent: { contentOffset: { y: scrollY } } }],

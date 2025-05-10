@@ -62,9 +62,6 @@ export default function TelaDeOracao({ route }) {
     }
   };
 
-  //console.log("Terço Atual:", tercoAtual.AlvoMeditacao);
-  //console.log("Mistério Atual:", misterioAtual + 1);
-
   return (
     <View style={styles.container}>
       <View style={styles.largeComponent}>

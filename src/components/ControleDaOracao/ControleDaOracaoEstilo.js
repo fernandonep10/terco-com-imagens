@@ -10,8 +10,11 @@ const styles = StyleSheet.create({
   },
 
   oracaoAtual: {
-    flex: 1,
+    height: "25%",
     backgroundColor: "black",
+    paddingTop: 17,
+    paddingBottom: 17,
+    overflow: "hidden",
   },
 
   playerDaOracao: {
@@ -33,7 +36,7 @@ const styles = StyleSheet.create({
     flexDirection: "row", // Define layout horizontal
     justifyContent: "space-between", // Espaçamento entre os itens
     alignItems: "center", // Alinha os itens verticalmente
-    flex: 2,
+    flex: 1,
   },
 });
 
